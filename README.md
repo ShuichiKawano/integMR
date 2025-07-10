@@ -22,8 +22,7 @@ source("R/cv.integMRR.R")
 Setting of simulation.
 ```
 library(MASS)
-rho_x <- 0.1
-rho_y <- 0.1
+rho_x <- 0.1; rho_y <- 0.1
 num_noise_variable <- 5
 nn1 <- nn2 <- 50
 set.seed(1)
@@ -31,8 +30,7 @@ x <- y  <-  as.list(NULL)
 true_param <- as.list(NULL)
 ### setting coefficients
 B <- cbind(c(c(0.5,0.5,0.5,0.25,0.25), rep(0, 5)), c(rep(0, 5), c(0.25,0.25,0.15,0.15,0.15)))
-true_param[[1]] <- rbind(B, matrix(0, num_noise_variable, ncol(B)))
-true_param[[2]] <- rbind(B, matrix(0, num_noise_variable, ncol(B)))
+true_param[[2]] <- true_param[[1]] <- rbind(B, matrix(0, num_noise_variable, ncol(B)))
 ### generating x
 Sigma_x <- diag( rep(1, nrow(B)) )
 for(i in 1:nrow(Sigma_x)) for(j in 1:ncol(Sigma_x)) Sigma_x[i ,j] = rho_x^abs(i-j)
@@ -47,7 +45,7 @@ y[[1]] <- x[[1]]%*%true_param[[1]] + mvrnorm(nrow(x[[1]]), rep(0, nrow(Sigma_y))
 y[[2]] <- x[[2]]%*%true_param[[2]] + mvrnorm(nrow(x[[2]]), rep(0, nrow(Sigma_y)), Sigma_y)
 ```
 
-Perform spcrSVD
+Perform integMR
 ```
 # Perform integMR in the file integMR.R
 integMR(x = x, y = y, lambda = 0.3)
