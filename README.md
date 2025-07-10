@@ -1,7 +1,7 @@
 # Sparse multivariate regression in integrative analysis (integMR)
 Author: Shuichi Kawano, Toshikazu Fukushima, Junichi Nakagawa, Mamoru Oshiki
 
-This is an R source code for performing sparse multivariate regression in integrative analysis (integMR). The directory *R* includes many files that perform integMR. Among them, most important file is given as follows.
+This is an R source code for performing sparse multivariate regression in integrative analysis (integMR). The directory *R* consists of four files as follows:
 - **integMR.R** computes sparse multivariate regression in integrative analysis.
 - **cv.integMR.R** computes cross-validation of integMR. 
 - **integMRR.R** provides sparse multivariate regression with regularized covariance matrix in integrative analysis.
