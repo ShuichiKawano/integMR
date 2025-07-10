@@ -25,9 +25,9 @@ num_noise_variable <- 5
 nn1 <- nn2 <- 50
 set.seed(1)
 x <- y  <-  as.list(NULL)
+true_param <- as.list(NULL)
 ### setting coefficients
 B <- cbind(c(c(0.5,0.5,0.5,0.25,0.25), rep(0, 5)), c(rep(0, 5), c(0.25,0.25,0.15,0.15,0.15)))
-true_param <- as.list(NULL)
 true_param[[1]] <- rbind(B, matrix(0, num_noise_variable, ncol(B)))
 true_param[[2]] <- rbind(B, matrix(0, num_noise_variable, ncol(B)))
 ### generating x
