@@ -8,7 +8,7 @@ This is an R source code for performing sparse multivariate regression in integr
 - **cv.integMRR.R** computes cross-validation of integMRR.
   
 integMR is introduced in the paper:
-Kawano, S., Fukushima, T., Nakagawa, J. and Oshiki, M. (2023) Multivariate regression modeling in integrative analysis via sparse regularization. arXiv:2304.07451
+Kawano, S., Fukushima, T., Nakagawa, J. and Oshiki, M. (2023) Multivariate regression modeling in integrative analysis via sparse regularization. _Japanese Journal of Statistics and Data Science (Online Access)_ (doi: [10.1007/s42081-025-00312-2](https://doi.org/10.1007/s42081-025-00312-2)).
 
 ## Usage example
 Read source files.
